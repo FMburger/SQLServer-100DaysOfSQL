@@ -1,6 +1,28 @@
 # SQLServer - 100 Days of SQL
 挑戰連續 100 天學習 SQL 語法
 
+## Day2. [LeetCode-#1076] Project Employee II
+該不會要來個一題多解?!😲
+
+#### Code
+    SELECT
+        project_id 
+    FROM 
+        Project 
+    GROUP BY project_id
+    HAVING COUNT(employee_id) = (
+        SELECT TOP 1
+            COUNT(employee_id) 
+        FROM 
+            Project 
+        GROUP BY project_id 
+  
+
+#### Success
+![](PNG/1076.ProjectEmployeesII.png)
+
+#### References
+
 ## Day1. [LeetCode-#1075] Project Employee I
 ### Hello world~~
 最近蠻常解 LeetCode 的題目, 所以第一天就從 LeetCode 開始吧!! 
