@@ -1,5 +1,5 @@
 # SQLServer - 100 Days of SQL
-挑戰連續 100 天學習 SQL 語法
+挑戰連續 100 天學習 SQL 語法, 除了可以複習之外, 也可以釐清很多不懂的地方。
 
 ## Day3. [LeetCode-#1077] Project Employee III
 延續前兩天的題目, 今天終於把最後一題結束了。
