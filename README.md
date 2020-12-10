@@ -1,6 +1,31 @@
 # SQLServer - 100 Days of SQL
 挑戰連續 100 天學習 SQL 語法, 除了可以複習之外, 也可以釐清很多不懂的地方。
 
+## Day4. [LeetCode-#1068, #1068]Product Sales Analysis I, II
+特別要提要注意的是, 在 II 中使用 GROUP BY 加上 SUM() 的用法, 雖然可以通過, 但還是會有 Time Limit Exceeded 的風險。其他更好的解法之後再做紀錄。
+
+#### Code (I)
+    SELECT
+        product_name,
+        year,
+        price
+    FROM Product P1
+    INNER JOIN Sales S1
+      ON P1.product_id = S1.product_id
+
+#### Code (II)
+    SELECT
+        product_id,
+        SUM(quantity)	AS total_quantity
+    FROM Sales
+    GROUP BY product_id
+
+#### Success (I)
+![](PNG/1068.ProductSalesAnalysisI.png)
+
+#### Success (II)
+![](PNG/1069.ProductSalesAnalysisII.png)
+
 ## Day3. [LeetCode-#1077] Project Employee III
 延續前兩天的題目, 今天終於把 Project Emplmoyee 系列的最後一題結束了。
 這題的解法是先用 LEFT JOIN 找出各專案最高經驗年數, 然後再做一次 LEFT JOIN 找出所對應的工號
@@ -54,7 +79,7 @@
 
 ## Day1. [LeetCode-#1075] Project Employee I
 ### Hello world~~
-最近蠻常解 LeetCode 的題目, 所以第一天就從 LeetCode 開始吧!! 
+最近蠻常解 LeetCode 的題目, 所以第一天就從 LeetCode 開始吧!!
 
 #### Code
     SELECT
