@@ -2,7 +2,7 @@
 挑戰連續 100 天學習 SQL 語法
 
 ## Day3. [LeetCode-#1077] Project Employee III
-延續前兩天的題目, 今天終於把最後一題結束了。
+延續前兩天的題目, 今天終於把 Project Emplmoyee 系列的最後一題結束了。
 這題的解法是先用 LEFT JOIN 找出各專案最高經驗年數, 然後再做一次 LEFT JOIN 找出所對應的工號
 
 #### Code
