@@ -21,7 +21,7 @@
 	  ON S1.product_id = M.product_id AND S1.year = M.year
 
 #### Success
-![](PNG/1070.ProductSalesAnalysisIIi.png)
+![](PNG/1070.ProductSalesAnalysisIII.png)
 
 ## Day4. [LeetCode-#1068, #1068]Product Sales Analysis I, II
 特別要注意的是, 在 II 中使用 GROUP BY 加上 SUM() 的用法, 雖然可以通過, 但還是會有 Time Limit Exceeded 的風險。其他更好的解法之後再做紀錄。
