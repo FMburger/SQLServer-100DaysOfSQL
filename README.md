@@ -1,6 +1,28 @@
 # SQLServer - 100 Days of SQL
 挑戰連續 100 天學習 SQL 語法, 除了可以複習之外, 也可以釐清很多不懂的地方。
 
+## Day5. [LeetCode-#1070] Product Sales Analysis III
+今天使用 GROUP BY 加上 INNER JOIN 完成
+
+#### Code
+	SELECT
+		S1.product_id,
+		S1.year  AS first_year,
+		S1.quantity,
+		S1.price
+	FROM sales S1
+	INNER JOIN (
+		SELECT 
+			S2.product_id,
+			min(S2.year) AS year
+		FROM sales S2
+		GROUP BY S2.product_id
+	) AS M
+	  ON S1.product_id = M.product_id AND S1.year = M.year
+
+#### Success
+![](PNG/1070.ProductSalesAnalysisIIi.png)
+
 ## Day4. [LeetCode-#1068, #1068]Product Sales Analysis I, II
 特別要提要注意的是, 在 II 中使用 GROUP BY 加上 SUM() 的用法, 雖然可以通過, 但還是會有 Time Limit Exceeded 的風險。其他更好的解法之後再做紀錄。
 
