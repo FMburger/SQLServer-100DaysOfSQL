@@ -1,6 +1,26 @@
 # SQLServer - 100 Days of SQL
 挑戰連續 100 天學習 SQL 語法, 除了可以複習之外, 也可以釐清很多不懂的地方。
 
+## Day6 [LeetCode-#1082] Sales Analysis I
+今天使用 GROUP BY 結合 RANK() 進行分組排序, 找出銷售總額最高的 seller
+
+#### Code
+	SELECT
+		seller_id
+	FROM(
+		SELECT
+			seller_id,
+			RANK()OVER(
+				ORDER BY SUM(price) DESC
+			) AS totalRank
+		FROM Sales
+		GROUP BY seller_id
+	) AS s
+	WHERE totalRank = 1
+
+#### Success
+![](PNG/1082.SalesAnalysisI.png)
+
 ## Day5. [LeetCode-#1070] Product Sales Analysis III
 今天使用 GROUP BY 加上 INNER JOIN 完成
 
