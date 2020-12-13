@@ -1,6 +1,26 @@
 # SQLServer - 100 Days of SQL
 挑戰連續 100 天學習 SQL 語法, 除了可以複習之外, 也可以釐清很多不懂的地方。
 
+## Day7. [LeetCode-#1083] Sales Analysis II
+今天使用EXCEPT 來解這題, 雖然可以過關, 不過需要其他更好的解法
+
+#### Code
+	SELECT 
+		buyer_id 
+	FROM sales s, product p 
+	WHERE s.product_id=p.product_id and p.product_name='S8'
+	EXCEPT
+	SELECT
+		 buyer_id 
+	FROM sales s, product p 
+	WHERE s.product_id=p.product_id and p.product_name='iPhone'
+
+#### Success
+![](PNG/1083.SalesAnalysisII.png)
+
+#### References
+* [You Probably don’t Use SQL INTERSECT or EXCEPT Often Enough](https://blog.jooq.org/2015/10/06/you-probably-dont-use-sql-intersect-or-except-often-enough/)
+
 ## Day6 [LeetCode-#1082] Sales Analysis I
 今天使用 GROUP BY 結合 RANK() 進行分組排序, 找出銷售總額最高的 seller
 
