@@ -15,6 +15,10 @@
 #### Success
 ![](PNG/1084.SalesAnalysisIII.png)
 
+#### References
+1. [Can you Join two Tables Without a Common Column?](https://learnsql.com/blog/join-tables-without-common-column/)
+2. [Select from two tables:  Example](http://www1.udel.edu/evelyn/SQL-Class2/SQLclass2_2tblEg.html)
+
 ## Day7. [LeetCode-#1083] Sales Analysis II
 今天使用EXCEPT 來解這題, 雖然可以過關, 不過需要其他更好的解法
 
