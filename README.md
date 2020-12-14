@@ -39,7 +39,7 @@
 #### References
 * [You Probably don’t Use SQL INTERSECT or EXCEPT Often Enough](https://blog.jooq.org/2015/10/06/you-probably-dont-use-sql-intersect-or-except-often-enough/)
 
-## Day6 [LeetCode-#1082] Sales Analysis I
+## Day6. [LeetCode-#1082] Sales Analysis I
 今天使用 GROUP BY 結合 RANK() 進行分組排序, 找出銷售總額最高的 seller
 
 #### Code
