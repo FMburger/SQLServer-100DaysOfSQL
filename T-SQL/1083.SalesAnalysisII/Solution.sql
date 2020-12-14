@@ -1,10 +1,10 @@
 USE LeetCode_SalesAnalysis
-SELECT 
-	buyer_id 
-FROM sales s, product p 
-WHERE s.product_id=p.product_id and p.product_name='S8'
-EXCEPT
+GO
+
 SELECT
-		buyer_id 
-FROM sales s, product p 
-WHERE s.product_id=p.product_id and p.product_name='iPhone'
+	S.product_id, P.product_name
+FROM sales S, product P
+WHERE S.product_id = P.product_id
+GROUP BY S.product_id, P.product_name
+HAVING MIN(S.sale_date) >= '2019-01-01' 
+  AND MAX(S.sale_date) <= '2019-03-31'

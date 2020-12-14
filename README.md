@@ -1,6 +1,20 @@
 # SQLServer - 100 Days of SQL
 挑戰連續 100 天學習 SQL 語法, 除了可以複習之外, 也可以釐清很多不懂的地方。
 
+## Day8. [LeetCode-#1084] Sales Analysis III
+
+#### Code
+    SELECT
+        S.product_id, P.product_name
+    FROM sales S, product P
+    WHERE S.product_id = P.product_id
+    GROUP BY S.product_id, P.product_name
+    HAVING MIN(S.sale_date) >= '2019-01-01' 
+    AND MAX(S.sale_date) <= '2019-03-31'
+
+#### Success
+![](PNG/1084.SalesAnalysisIII.png)
+
 ## Day7. [LeetCode-#1083] Sales Analysis II
 今天使用EXCEPT 來解這題, 雖然可以過關, 不過需要其他更好的解法
 
