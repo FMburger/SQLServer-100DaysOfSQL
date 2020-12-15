@@ -1,6 +1,35 @@
 # SQLServer - 100 Days of SQL
 挑戰連續 100 天學習 SQL 語法, 除了可以複習之外, 也可以釐清很多不懂的地方。
 
+## Day9. [LeetCode-#511, #512] Game Play Analysis I,  Game Play Analysis II
+
+#### Code (I)
+	SELECT
+		player_id,
+		MIN(event_date) AS first_login
+	FROM Activity
+	GROUP BY player_id
+
+#### Code (II)
+	SELECT 
+		player_id,
+		device_id
+	FROM (SELECT
+		player_id,
+		device_id,
+		RANK() OVER (
+			PARTITION BY player_id ORDER BY event_date
+		) AS RANK
+		FROM Activity
+	)T2 
+	WHERE RANK=1
+
+#### Success (I)
+![](PNG/511.GamePlayAnalysisI.png)
+
+#### Success (II)
+![](PNG/512.GamePlayAnalysisII.png)
+
 ## Day8. [LeetCode-#1084] Sales Analysis III
 
 #### Code
