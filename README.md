@@ -1,6 +1,48 @@
 # SQLServer - 100 Days of SQL
 挑戰連續 100 天學習 SQL 語法, 除了可以複習之外, 也可以釐清很多不懂的地方。
 
+## Day11. [LeetCode-#550] Game Play Analysis IV
+今天參考網友的做法做了一次, 細節在研究
+
+#### Purpose
+>查詢連續兩日都登入的玩家比例
+
+#### Code
+	SELECT
+		 ROUND(
+			CAST(
+				COUNT(
+					DISTINCT CASE WHEN DATEDIFF(DAY,d1,d2)=1
+					  THEN player_id 
+					  ELSE null END
+				) AS DECIMAL(18,2)
+			)/COUNT(DISTINCT player_id),
+			2
+		) AS fraction
+	FROM(
+		SELECT 
+			player_id,
+			event_date d1,
+			lead(event_date,1)
+			  OVER(
+				PARTITION BY player_id
+				ORDER BY rk
+			) d2
+		FROM(
+			SELECT 
+				player_id,
+				event_date,
+				DENSE_RANK()OVER(
+					PARTITION BY player_id 
+					ORDER BY event_date
+				) AS rk
+			FROM Activity
+		) t
+	WHERE rk=1 or rk=2) t
+
+#### Success
+![](PNG/550.GamePlayAnalysisIV.PNG)
+
 ## Day10. [LeetCode-#534] Game Play Analysis III
 今天是 Game play analysis 的第三題, 使用 SUM over 的方式來解題。
 
