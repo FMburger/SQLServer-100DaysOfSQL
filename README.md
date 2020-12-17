@@ -2,7 +2,7 @@
 挑戰連續 100 天學習 SQL 語法, 除了可以複習之外, 也可以釐清很多不懂的地方。
 
 ## Day10. [LeetCode-#534] Game Play Analysis III
-今天是 Game play anaysis 的第三題, 使用 SUM over 的方式來解題。
+今天是 Game play analysis 的第三題, 使用 SUM over 的方式來解題。
 
 #### Purpose
 >查詢每個時間點上該名員工已經玩了多少次遊戲
