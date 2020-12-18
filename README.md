@@ -1,6 +1,21 @@
 # SQLServer - 100 Days of SQL
 挑戰連續 100 天學習 SQL 語法, 除了可以複習之外, 也可以釐清很多不懂的地方。
 
+## Day12. [LeetCode-#175] Combine Two Tables
+#### Purpose
+>查找指定欄位
+
+#### Code
+    SELECT 
+        FirstName,
+        LastName,
+        City,
+        State
+    FROM Address right join Person ON Address.PersonId = Person.PersonId
+
+#### Success
+![](PNG/175.CombineTwoTables.PNG)
+
 ## Day11. [LeetCode-#550] Game Play Analysis IV
 今天參考網友的做法做了一次, 細節在研究
 
