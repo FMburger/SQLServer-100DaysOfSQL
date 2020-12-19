@@ -1,6 +1,25 @@
 # SQLServer - 100 Days of SQL
 挑戰連續 100 天學習 SQL 語法, 除了可以複習之外, 也可以釐清很多不懂的地方。
 
+## Day13 [LeetCode#176] Second Hightest Salary
+使用 MAX() 找出最高的薪水, 在小於最高薪的資料中再找出最高薪。
+
+#### Purpose
+>找出第二高薪
+
+#### Code
+    SELECT
+        MAX(Salary) AS SecondHighestSalary
+    FROM Employee
+    WHERE Salary < (
+        SELECT
+            MAX(Salary) 
+        FROM Employee
+    )
+
+#### Success
+![](PNG/176.SecondHighestSalary.PNG)
+
 ## Day12. [LeetCode-#175] Combine Two Tables
 #### Purpose
 >查找指定欄位
