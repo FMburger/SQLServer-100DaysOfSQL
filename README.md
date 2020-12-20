@@ -1,6 +1,29 @@
 # SQLServer - 100 Days of SQL
 挑戰連續 100 天學習 SQL 語法, 除了可以複習之外, 也可以釐清很多不懂的地方。
 
+##  Day14 [LeetCode-#182] Duplicate Emails
+
+#### Purpose
+>找出重複的電子郵件
+
+#### Column 
+Email
+
+#### Skill
+>GROUP BY <column_name> 
+HAVING COUNT(<column_name>) > 1
+
+#### Code
+    SELECT
+        Email AS Email
+    FROM
+        Person
+    GROUP BY Email
+    HAVING  COUNT(Email) > 1
+
+#### Success
+![](PNG/182.DuplicateEmails.PNG)
+
 ## Day13 [LeetCode#176] Second Hightest Salary
 使用 MAX() 找出最高的薪水, 在小於最高薪的資料中再找出最高薪。
 
