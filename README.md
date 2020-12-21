@@ -1,6 +1,29 @@
 # SQLServer - 100 Days of SQL
 挑戰連續 100 天學習 SQL 語法, 除了可以複習之外, 也可以釐清很多不懂的地方。
 
+##  Day15. [LeetCode-#183]Customers Who Never Order
+
+#### Purpose
+>找出沒有下訂的顧客
+
+#### Column 
+Customers
+
+#### Skill
+>LEFT JOIN  + IS NULL
+
+#### Code
+    SELECT
+        Name AS Customers
+    FROM
+        Customers LEFT JOIN Orders
+        ON Customers.Id = Orders.CustomerId
+    WHERE
+        Orders.CustomerId IS NULL
+
+#### Success
+![](PNG/183.CustomersWhoNeverOrder.PNG)
+
 ##  Day14 [LeetCode-#182] Duplicate Emails
 
 #### Purpose
