@@ -1,6 +1,35 @@
 # SQLServer - 100 Days of SQL
 挑戰連續 100 天學習 SQL 語法, 除了可以複習之外, 也可以釐清很多不懂的地方。
 
+## Day16. [LeetCode-#181] Employees Earning More Than Their 
+
+#### Purpose
+> 找出收入高於主管的員工
+
+#### Column 
+> Employee
+
+#### Skill
+> Subquery
+
+#### Code
+    SELECT
+        Name as Employee
+    FROM
+        Employee E1
+    WHERE
+        E1.salary > (
+            SELECT
+               E2.salary
+            FROM
+                Employee E2
+            WHERE
+                E1.ManagerId = E2.Id
+        )
+
+#### Success
+![](PNG/181.EmployeesEarningMoreThanTheirManagers.PNG)
+
 ##  Day15. [LeetCode-#183]Customers Who Never Order
 
 #### Purpose
@@ -33,8 +62,8 @@ Customers
 Email
 
 #### Skill
->GROUP BY <column_name> 
-HAVING COUNT(<column_name>) > 1
+>GROUP BY <column_name>
+ HAVING COUNT(<column_name>) > 1
 
 #### Code
     SELECT
