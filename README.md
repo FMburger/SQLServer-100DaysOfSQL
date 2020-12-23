@@ -1,6 +1,29 @@
 # SQLServer - 100 Days of SQL
 挑戰連續 100 天學習 SQL 語法, 除了可以複習之外, 也可以釐清很多不懂的地方。
 
+##  Day17. [LeetCode-#577.]Employee Bonus
+
+#### Purpose
+>Select all employee's name and bonus whose bonus is < 1000.
+
+#### Column 
+> name, bonus
+
+#### Skill
+> LEFT JOIN + OR IS NULL
+
+#### Code
+    SELECT
+        name,
+        bonus
+    FROM Employee T1
+    LEFT JOIN Bonus T2
+      ON T1.empId = T2.empId
+    WHERE bonus < 1000 OR bonus IS NULL
+
+#### Success
+![](PNG/577. Employee Bonus.PNG)
+
 ## Day16. [LeetCode-#181] Employees Earning More Than Their 
 
 #### Purpose
@@ -39,7 +62,7 @@
 Customers
 
 #### Skill
->LEFT JOIN  + IS NULL
+>LEFT JOIN + IS NULL
 
 #### Code
     SELECT
