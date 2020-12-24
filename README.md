@@ -1,6 +1,36 @@
 # SQLServer - 100 Days of SQL
 挑戰連續 100 天學習 SQL 語法, 除了可以複習之外, 也可以釐清很多不懂的地方。
 
+##  Day18. [LeetCode- #1303] Find the Team Size
+
+#### Purpose
+> Find the teams size of each of the employees
+
+#### Column 
+> employee_id, team_size
+
+#### Skill
+> * INNER JOIN + Subquery
+> * Count() + group by
+
+#### Code
+    SELECT
+        employee_id,
+        team_size
+    FROM employee
+    INNER JOIN(
+        SELECT
+            team_id, COUNT(employee_id) AS team_size
+        FROM Employee
+        GROUP BY team_id
+    )Team
+      ON employee.team_id = Team.team_id
+    ORDER BY employee_id
+
+
+#### Success
+![](PNG/1303.FindtheTeamSize.PNG)
+
 ##  Day17. [LeetCode-#577.]Employee Bonus
 
 #### Purpose
