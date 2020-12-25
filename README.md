@@ -1,6 +1,27 @@
 # SQLServer - 100 Days of SQL
 挑戰連續 100 天學習 SQL 語法, 除了可以複習之外, 也可以釐清很多不懂的地方。
 
+##  Day19. [LeetCode-#1148] Article Views I
+
+#### Purpose
+> Find all the authors that viewed at least one of their own articles
+
+#### Column 
+> id
+
+#### Skill
+> SELECT DISTINCT
+
+#### Code
+    SELECT DISTINCT
+        viewer_id AS id
+    FROM Views
+    WHERE author_id = viewer_id 
+
+#### Success
+![](PNG/1148.ArticleViewsI.PNG)
+
+
 ##  Day18. [LeetCode- #1303] Find the Team Size
 
 #### Purpose
