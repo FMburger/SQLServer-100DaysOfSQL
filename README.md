@@ -1,6 +1,27 @@
 # SQLServer - 100 Days of SQL
 挑戰連續 100 天學習 SQL 語法, 除了可以複習之外, 也可以釐清很多不懂的地方。
 
+## Day21 [LeetCode-#584] Find Customer Referee
+
+#### Purpose
+> Return the list of customers NOT referred by the person with id '2'
+
+#### Column 
+> name
+
+#### Skill
+>
+
+#### Code
+    SELECT
+        name
+    FROM customer
+    WHERE referee_id != 2
+      OR referee_id IS NULL
+
+#### Success
+![](PNG/584.FindCustomerReferee.PNG)
+
 ## Day20. [LeetCode-#1164] Product Price at a Given Date
 
 #### Purpose
