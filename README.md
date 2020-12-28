@@ -1,6 +1,36 @@
 # SQLServer - 100 Days of SQL
 挑戰連續 100 天學習 SQL 語法, 除了可以複習之外, 也可以釐清很多不懂的地方。
 
+## Day22 [LeetCode-#1241] Number of Comments per Post
+
+#### Purpose
+> Find the number of comments per post
+
+#### Column
+>post_id, number_of_comments
+
+#### Skill
+
+#### Code
+    SELECT DISTINCT 
+        s.sub_id AS post_id,
+        ISNULL(t.number_of_comments,0) AS number_of_comments
+    FROM submissions s
+    LEFT JOIN
+    (
+        SELECT DISTINCT 
+            parent_id,
+            count(DISTINCT sub_id) AS number_of_comments
+        FROM submissions
+        WHERE parent_id IS NOT NULL
+        GROUP BY parent_id
+    ) AS t
+      ON s.sub_id = t.parent_id
+    WHERE s.parent_id IS NULL
+
+#### Success
+![](PNG/1241.NumberofCommentsperPost.PNG)
+
 ## Day21 [LeetCode-#584] Find Customer Referee
 
 #### Purpose
