@@ -24,7 +24,7 @@
         FROM submissions
         WHERE parent_id IS NOT NULL
         GROUP BY parent_id
-    ) AS T2
+    ) T2
       ON T1.sub_id = T2.parent_id
     WHERE T1.parent_id IS NULL
 
