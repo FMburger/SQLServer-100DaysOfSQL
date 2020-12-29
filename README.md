@@ -4,6 +4,35 @@
 ## Day22 [LeetCode-#1241] Number of Comments per Post
 
 #### Purpose
+> Query to check whether these three line segments can form a triangle
+
+#### Column
+> x, y, z, triangle
+
+#### Skill
+> CASE + AND
+
+#### Code
+    SELECT
+        x,
+        y,
+        z,
+    CASE
+        WHEN x + y > z
+          AND y + z > x
+          AND  z + x > y
+        THEN 'Yes'
+        ELSE 'No'
+    END AS triangle
+    FROM Triangle
+
+#### Success
+![](PNG/610.TriangleJudgement.PNG)
+
+
+## Day22 [LeetCode-#1241] Number of Comments per Post
+
+#### Purpose
 > Find the number of comments per post
 
 #### Column
