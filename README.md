@@ -7,15 +7,15 @@
 > Find the number of comments per post
 
 #### Column
->post_id, number_of_comments
+> post_id, number_of_comments
 
 #### Skill
 
 #### Code
     SELECT DISTINCT 
-        s.sub_id AS post_id,
-        ISNULL(t.number_of_comments,0) AS number_of_comments
-    FROM submissions s
+        T1.sub_id AS post_id,
+        ISNULL(T2.number_of_comments,0) AS number_of_comments
+    FROM submissions T1
     LEFT JOIN
     (
         SELECT DISTINCT 
@@ -24,9 +24,9 @@
         FROM submissions
         WHERE parent_id IS NOT NULL
         GROUP BY parent_id
-    ) AS t
-      ON s.sub_id = t.parent_id
-    WHERE s.parent_id IS NULL
+    ) AS T2
+      ON T1.sub_id = T2.parent_id
+    WHERE T1.parent_id IS NULL
 
 #### Success
 ![](PNG/1241.NumberofCommentsperPost.PNG)
