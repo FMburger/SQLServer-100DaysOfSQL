@@ -1,7 +1,33 @@
 # SQLServer - 100 Days of SQL
 挑戰連續 100 天學習 SQL 語法, 除了可以複習之外, 也可以釐清很多不懂的地方。
 
-## Day22 [LeetCode-#1241] Number of Comments per Post
+## Day24 [LeetCode-#1517] Find Users With Valid E-Mails
+
+#### Purpose
+> Find the user who have valid emails.
+
+#### Column
+> user_id, name, mail
+
+#### Skill
+> may contain_LIKE '%[^]%'
+
+#### Code
+    SELECT
+        *
+    FROM Users
+    WHERE (
+        mail LIKE '[a-z]%' 
+    )AND(
+        LEFT(mail, LEN(mail) - 13) NOT LIKE '%[^0-9a-zA-Z_.-]%'
+    )AND(
+        mail LIKE '%@leetcode.com'
+    )
+
+#### Success
+![](PNG/1517.FindUsersWithValidE-Mails.PNG)
+
+## Day23 [LeetCode-#610] Triangle Judgement
 
 #### Purpose
 > Query to check whether these three line segments can form a triangle
