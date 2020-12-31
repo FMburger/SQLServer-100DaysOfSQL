@@ -1,6 +1,31 @@
 # SQLServer - 100 Days of SQL
 挑戰連續 100 天學習 SQL 語法, 除了可以複習之外, 也可以釐清很多不懂的地方。
 
+## Day25 [LeetCode-#627] Swap Salary
+
+#### Purpose
+> Swap all f and m values with a single update statement and no intermediate temp table
+
+#### Column
+> id, name, sex, salary
+
+#### Skill
+> sex change
+
+#### Code
+    UPDATE
+        salary
+    SET sex = 
+    (
+        CASE
+            WHEN sex = 'f' THEN 'm'
+            WHEN sex = 'm' THEN 'f'
+        END
+    )
+
+#### Success
+![](PNG/627.SwapSalary.PNG)
+
 ## Day24 [LeetCode-#1517] Find Users With Valid E-Mails
 
 #### Purpose
