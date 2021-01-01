@@ -1,6 +1,39 @@
 # SQLServer - 100 Days of SQL
 挑戰連續 100 天學習 SQL 語法, 除了可以複習之外, 也可以釐清很多不懂的地方。
 
+## Day26 [LeetCode-#1327] List the Products Ordered in a Period
+
+#### Purpose
+> get the names of products with greater than or equal to 100 units ordered in February 2020 and their amount
+
+#### Column
+> product_name, unit
+
+#### Skill
+> 
+
+#### Code
+    SELECT
+        product_name,
+        unit
+    FROM Products T1
+    INNER JOIN(
+        SELECT
+            product_id,
+            SUM(unit) as unit
+        FROM Orders
+        WHERE (
+            order_date >= '2020-02-01'
+            AND order_date < '2020-03-01'
+        )
+        GROUP BY product_id
+    ) T2
+      ON T1.product_id = T2. product_id
+    WHERE unit >= 100
+
+#### Success
+![](PNG/1327.ListtheProductsOrderedinaPeriod.PNG)
+
 ## Day25 [LeetCode-#627] Swap Salary
 
 #### Purpose

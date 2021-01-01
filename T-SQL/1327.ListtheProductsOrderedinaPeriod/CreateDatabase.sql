@@ -1,0 +1,2 @@
+CREATE DATABASE LeetCode_ListtheProductsOrderedinaPeriod
+GO
