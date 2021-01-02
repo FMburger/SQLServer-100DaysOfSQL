@@ -1,6 +1,29 @@
 # SQLServer - 100 Days of SQL
 挑戰連續 100 天學習 SQL 語法, 除了可以複習之外, 也可以釐清很多不懂的地方。
 
+## Day27 [LeetCode-#?] Big Countries
+
+#### Purpose
+> Find big country
+
+#### Column
+> name, population, area
+
+#### Skill
+> 
+
+#### Code
+    SELECT
+        name,
+        population,
+        area
+    FROM World
+    WHERE area > 3000000
+    OR population > 25000000
+
+#### Success
+![](PNG/595.BigCountries.PNG)
+
 ## Day26 [LeetCode-#1327] List the Products Ordered in a Period
 
 #### Purpose
