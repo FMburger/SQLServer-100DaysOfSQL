@@ -1,6 +1,31 @@
 # SQLServer - 100 Days of SQL
 挑戰連續 100 天學習 SQL 語法, 除了可以複習之外, 也可以釐清很多不懂的地方。
 
+## Day28 [LeetCode-#620] Not Boring Movies
+
+#### Purpose
+> output movies with an odd numbered ID and a description that is not 'boring'. Order the result by rating.
+
+#### Column
+> id, movie, description, rating
+
+#### Skill
+> 
+
+#### Code
+    SELECT
+        id,
+        movie,
+        description,
+        rating
+    FROM cinema
+    WHERE id % 2 != 0
+      AND description != 'boring'
+    ORDER By rating DESC
+
+#### Success
+![](PNG/620.NotBoringMovies.PNG)
+
 ## Day27 [LeetCode-#?] Big Countries
 
 #### Purpose
