@@ -1,6 +1,36 @@
 # SQLServer - 100 Days of SQL
 挑戰連續 100 天學習 SQL 語法, 除了可以複習之外, 也可以釐清很多不懂的地方。
 
+## Day29 [LeetCode-#1294] Weather Type in Each Country
+
+#### Purpose
+> Find the type of weather in each country for November 2019
+
+#### Column
+> country_name, weather_type
+
+#### Skill
+> 
+
+#### Code
+    SELECT 
+        country_name,
+    CASE 
+        WHEN AVG(CAST(Weather.weather_state AS FLOAT)) <= 15 THEN 'Cold'
+        WHEN AVG(CAST(Weather.weather_state AS FLOAT)) >= 25 THEN 'Hot'
+        ELSE 'Warm'
+    END AS weather_type
+    FROM Countries
+    LEFT JOIN Weather
+    ON Countries.country_id = Weather.country_id
+    WHERE Weather.day 
+    BETWEEN '11/01/2019' 
+    AND '11/30/2019'
+    GROUP BY country_name
+
+#### Success
+![](PNG/1294.WeatherTypeinEachCountry.PNG)
+
 ## Day28 [LeetCode-#620] Not Boring Movies
 
 #### Purpose
