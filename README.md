@@ -1,6 +1,35 @@
 # SQLServer - 100 Days of SQL
 挑戰連續 100 天學習 SQL 語法, 除了可以複習之外, 也可以釐清很多不懂的地方。
 
+## Day30 [LeetCode-#1543] Fix Product Name Format
+
+#### Purpose
+> Return table result in specific format.
+
+#### Column
+> product_name, sale_date, total
+
+#### Skill
+> 
+
+#### Code
+    SELECT
+        product_name,
+        sale_date,
+        count(*) AS total
+    FROM(
+        SELECT 
+            lower(ltrim(rtrim(product_name))) product_name,
+            convert(varchar(7),sale_date,126) AS sale_date
+        FROM Sales
+        WHERE year(sale_date) = '2000'
+    ) T2
+    GROUP BY product_name,sale_date
+    ORDER BY product_name,sale_date
+
+#### Success
+![](PNG/1543.FixProductNameFormat.PNG)
+
 ## Day29 [LeetCode-#1294] Weather Type in Each Country
 
 #### Purpose
