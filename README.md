@@ -1,6 +1,52 @@
 # SQLServer - 100 Days of SQL
 挑戰連續 100 天學習 SQL 語法, 除了可以複習之外, 也可以釐清很多不懂的地方。
 
+## Day31 [LeetCode-#1173] Immediate Food Delivery I
+
+#### Purpose
+> Find the percentage of immediate orders in the table
+
+#### Column
+> immediate_percentage
+
+#### Skill
+> 
+
+#### Code
+    SELECT
+        ROUND(
+            (
+                (
+                    (
+                    COUNT(t.delivery_id)
+                    ) * 1.0 / (
+                    SELECT 
+                        (
+                        COUNT(delivery_id)
+                        )* 1.0 
+                    FROM 
+                        delivery
+                    )
+                ) * 100
+            ), 
+            2
+        ) AS immediate_percentage 
+    FROM 
+    (
+        SELECT
+        delivery_id, 
+        CASE
+            WHEN order_date = customer_pref_delivery_date THEN 'immediate'
+            else 'scheduled' END AS customerDeliveryDate 
+        FROM 
+        delivery
+    ) AS t 
+    WHERE 
+    t.customerDeliveryDate = 'immediate'
+
+#### Success
+![](PNG/1173.ImmediateFoodDeliveryI.PNG)
+
 ## Day30 [LeetCode-#1543] Fix Product Name Format
 
 #### Purpose
