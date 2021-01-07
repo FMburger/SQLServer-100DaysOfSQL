@@ -1,6 +1,28 @@
 # SQLServer - 100 Days of SQL
 挑戰連續 100 天學習 SQL 語法, 除了可以複習之外, 也可以釐清很多不懂的地方。
 
+## Day32 [LeetCode-#613] Shortest Distance in a Line
+
+#### Purpose
+> Find the shortest distance between two points in these points.
+
+#### Column
+> query_name, quality, poor_query_percentage
+
+#### Skill
+> 
+
+#### Code
+    SELECT 
+        MIN(ABS(p1.x - p2.x)) AS shortest
+    FROM point p1 
+    JOIN point p2
+      ON p1.x != p2.x
+    
+
+#### Success
+![](PNG/613.ShortestDistanceinaLine.PNG)
+
 ## Day31 [LeetCode-#1173] Immediate Food Delivery I
 
 #### Purpose
