@@ -10,7 +10,7 @@
 > query_name, quality, poor_query_percentage
 
 #### Skill
-> 
+> The distance between two point << join_!=
 
 #### Code
     SELECT 
