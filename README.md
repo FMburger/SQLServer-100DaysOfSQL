@@ -1,6 +1,41 @@
 # SQLServer - 100 Days of SQL
 挑戰連續 100 天學習 SQL 語法, 除了可以複習之外, 也可以釐清很多不懂的地方。
 
+## Day33 [LeetCode-#1179] Reformat Department Table
+
+#### Purpose
+> Reformat the table such that there is a department id column and a revenue column for each month.
+
+#### Column
+> id, Jan_Revenue, Feb_Revenue, Mar_Revenue, Apr_Revenue, May_revenue, June_Revenue, July_Revenue, Aug_Revenue, Sept_Revenue, Oct_Revenue, Nov_Revenue, Dec_Revenue
+
+#### Skill
+> 
+
+#### Code
+    SELECT  id,
+            [Jan] AS Jan_Revenue,[Feb] AS Feb_Revenue,[Mar] AS Mar_Revenue,[Apr] AS Apr_Revenue,
+            [May] AS May_Revenue,[Jun] AS Jun_Revenue,[Jul] AS Jul_Revenue,[Aug] AS Aug_Revenue,
+            [Sep] AS Sep_Revenue,[Oct] AS Oct_Revenue,[Nov] AS Nov_Revenue,[Dec] AS Dec_Revenue
+    FROM
+        (
+            SELECT 
+                id,
+                revenue,
+                month
+            FROM Department
+        ) AS dep
+    PIVOT
+    (
+        MAX(revenue)
+        FOR month IN ([Jan],[Feb],[Mar],[Apr],
+                    [May],[Jun],[Jul],[Aug],
+                    [Sep],[Oct],[Nov],[Dec])
+    ) AS ReFORmat
+
+#### Success
+![](PNG/1179.ReformatDepartmentTable.PNG)
+
 ## Day32 [LeetCode-#613] Shortest Distance in a Line
 
 #### Purpose
@@ -10,7 +45,7 @@
 > query_name, quality, poor_query_percentage
 
 #### Skill
-> Find the distance between any two points on x-axis << ABS("StartingPoint" - "EndingPoint")_"table" join "table"_"startingPoint" != "endingPoit"
+> Find the distance between any two points on x-axis << ABS("startingPoint" - "sndingPoint")_"" join "table"_"startingPoint" != "endingPoit"
 
 #### Code
     SELECT
