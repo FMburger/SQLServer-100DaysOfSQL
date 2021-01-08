@@ -10,14 +10,14 @@
 > query_name, quality, poor_query_percentage
 
 #### Skill
-> The distance between two point << join_!=
+> Find the distance between any two points on x-axis << ABS("StartingPoint" - "EndingPoint")_"table" join "table"_"startingPoint" != "endingPoit"
 
 #### Code
-    SELECT 
-        MIN(ABS(p1.x - p2.x)) AS shortest
-    FROM point p1 
-    JOIN point p2
-      ON p1.x != p2.x
+    SELECT
+        MIN(ABS(startingPoint.x - endingPoint.x)) AS shortest
+    FROM point startingPoint 
+    JOIN point endingPoint
+      ON startingPoint.x != endingPoint.x
     
 
 #### Success
