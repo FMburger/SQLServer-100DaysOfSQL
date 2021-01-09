@@ -1,6 +1,20 @@
 # SQLServer - 100 Days of SQL
 挑戰連續 100 天學習 SQL 語法, 除了可以複習之外, 也可以釐清很多不懂的地方。
 
+## Day34 [Issue] TCP Port Is Already In Use
+
+#### Symptoms
+> Unable to start SQL Server
+
+#### Resolution
+> Excluding the port 1433 with command "netsh int ipv4 add excludedportrange tcp startport=1433 numberofports=1 store=persistent"
+
+#### Cause
+> The port 1433 is occupied by Windows OS dynamically assigned port
+
+#### Issue
+![](PNG/TCPPortIsAlreadyInUse.PNG)
+
 ## Day33 [LeetCode-#1179] Reformat Department Table
 
 #### Purpose
@@ -17,14 +31,13 @@
             [Jan] AS Jan_Revenue,[Feb] AS Feb_Revenue,[Mar] AS Mar_Revenue,[Apr] AS Apr_Revenue,
             [May] AS May_Revenue,[Jun] AS Jun_Revenue,[Jul] AS Jul_Revenue,[Aug] AS Aug_Revenue,
             [Sep] AS Sep_Revenue,[Oct] AS Oct_Revenue,[Nov] AS Nov_Revenue,[Dec] AS Dec_Revenue
-    FROM
-        (
-            SELECT 
-                id,
-                revenue,
-                month
-            FROM Department
-        ) AS dep
+    FROM(
+        SELECT 
+            id,
+            revenue,
+            month
+        FROM Department
+    ) AS dep
     PIVOT
     (
         MAX(revenue)

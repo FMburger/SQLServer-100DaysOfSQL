@@ -7,7 +7,7 @@ SELECT  id,
         [Sep] AS Sep_Revenue,[Oct] AS Oct_Revenue,[Nov] AS Nov_Revenue,[Dec] AS Dec_Revenue
 FROM
     (SELECT id,revenue,month FROM Department) AS dep
-PRIVOT
+PIVOT
 (
     MAX(revenue)
     FOR month IN ([Jan],[Feb],[Mar],[Apr],
