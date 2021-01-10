@@ -1,6 +1,10 @@
 # SQLServer - 100 Days of SQL
 挑戰連續 100 天學習 SQL 語法, 除了可以複習之外, 也可以釐清很多不懂的地方。
 
+## Day35 Update Snippets in VScode
+
+#### Update snippets
+
 ## Day34 [Issue] TCP Port Is Already In Use
 
 #### Symptoms
@@ -65,7 +69,7 @@
         MIN(ABS(startingPoint.x - endingPoint.x)) AS shortest
     FROM point startingPoint 
     JOIN point endingPoint
-      ON startingPoint.x != endingPoint.x
+        ON startingPoint.x != endingPoint.x
     
 
 #### Success
