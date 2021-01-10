@@ -1,13 +1,3 @@
-## Day? [Issue] Title
+## Day? Update Snippets in VScode
 
-#### Symptoms
-> 
-
-#### Resolution
-> 
-
-#### Cause
-> 
-
-#### Issue
-![](PNG/)
+#### Update snippets

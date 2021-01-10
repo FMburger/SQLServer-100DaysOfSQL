@@ -31,10 +31,11 @@
 > 
 
 #### Code
-    SELECT  id,
-            [Jan] AS Jan_Revenue,[Feb] AS Feb_Revenue,[Mar] AS Mar_Revenue,[Apr] AS Apr_Revenue,
-            [May] AS May_Revenue,[Jun] AS Jun_Revenue,[Jul] AS Jul_Revenue,[Aug] AS Aug_Revenue,
-            [Sep] AS Sep_Revenue,[Oct] AS Oct_Revenue,[Nov] AS Nov_Revenue,[Dec] AS Dec_Revenue
+    SELECT  
+        id,
+        [Jan] AS Jan_Revenue,[Feb] AS Feb_Revenue,[Mar] AS Mar_Revenue,[Apr] AS Apr_Revenue,
+        [May] AS May_Revenue,[Jun] AS Jun_Revenue,[Jul] AS Jul_Revenue,[Aug] AS Aug_Revenue,
+        [Sep] AS Sep_Revenue,[Oct] AS Oct_Revenue,[Nov] AS Nov_Revenue,[Dec] AS Dec_Revenue
     FROM(
         SELECT 
             id,
@@ -273,15 +274,15 @@
 > sex change
 
 #### Code
-    UPDATE
-        salary
-    SET sex = 
-    (
-        CASE
-            WHEN sex = 'f' THEN 'm'
-            WHEN sex = 'm' THEN 'f'
-        END
-    )
+UPDATE
+    salary
+SET sex = 
+(
+    CASE
+        WHEN sex = 'f' THEN 'm'
+        WHEN sex = 'm' THEN 'f'
+    END
+)
 
 #### Success
 ![](PNG/627.SwapSalary.PNG)
