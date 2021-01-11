@@ -20,7 +20,7 @@
     HAVING COUNT(DISTINCT article_id) > 1
 
 #### Success
-![](PNG/)
+![](PNG/1149.ArticleViewsII.PNG)
 
 ## Day35 Update Snippets in VScode
 
