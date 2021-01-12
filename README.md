@@ -1,6 +1,37 @@
 # SQLServer - 100 Days of SQL
 挑戰連續 100 天學習 SQL 語法, 除了可以複習之外, 也可以釐清很多不懂的地方。
 
+## Day37 [LeetCode-#603] Consecutive Available Seats
+
+#### Purpose
+> Find the consecutive available seats
+
+#### Column
+> seat_id
+
+#### Skill
+> 
+
+#### Code
+    SELECT DISTINCT 
+        c.seat_id
+    FROM cinema c
+    WHERE c.free = 1
+    AND EXISTS (
+        SELECT
+            1
+        FROM cinema
+        WHEREfree = 1
+        AND (
+            seat_id = c.seat_id - 1
+            OR seat_id = c.seat_id + 1
+        )
+    )
+    ORDER BY c.seat_id
+
+#### Success
+![](PNG/603.ConsecutiveAvailableSeats.PNG)
+
 ## Day36 [LeetCode-#1149] Article Views II
 
 #### Purpose
