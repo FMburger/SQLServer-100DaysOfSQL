@@ -1,6 +1,23 @@
 # SQLServer - 100 Days of SQL
 挑戰連續 100 天學習 SQL 語法, 除了可以複習之外, 也可以釐清很多不懂的地方。
 
+## Day39 Create a Stored Procedure
+
+#### Purpose
+> 
+
+#### Column
+> 
+
+#### Skill
+> 
+
+#### Code
+
+
+#### Success
+![](PNG/)
+
 ## Day38 [LeetCode-#586] Customer Placing the Largest Number of Orders
 
 #### Purpose
