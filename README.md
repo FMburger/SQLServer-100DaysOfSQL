@@ -1,6 +1,63 @@
 # SQLServer - 100 Days of SQL
 挑戰連續 100 天學習 SQL 語法, 除了可以複習之外, 也可以釐清很多不懂的地方。
 
+## Day40 [LeetCode-#?1435] Create a Session Bar Chart
+
+#### Purpose
+> Create a Session Bar Chart
+
+#### Column
+> bin, total
+
+#### Skill
+> 
+
+#### Code
+    SELECT
+        '[0-5>' AS bin,
+        SUM(
+            IIF(
+                duration/60 BETWEEN 0 AND 4,
+                1,
+                0
+            )
+        ) AS total 
+    FROM sessions
+    UNION
+    SELECT
+        '[5-10>' AS bin,
+        SUM(
+            IIF(
+                duration/60 BETWEEN 5 AND 9,
+                1,
+                0
+            )
+        ) AS total FROM sessions
+    UNION
+    SELECT
+        '[10-15>' AS bin,
+        SUM(
+            IIF(
+                duration/60 BETWEEN 10 AND 14,
+                1,
+                0
+            )
+        ) AS total 
+    FROM sessions
+    UNION
+    SELECT
+        '15 or more' AS bin ,
+        SUM(
+            IIF(
+                duration / 60 >= 15,
+                1,
+                0
+            )
+        ) AS total FROM sessions
+
+#### Success
+![](PNG/1435.Create aSessionBarChart.PNG)
+
 ## Day39 Create a Stored Procedure
 
 #### Purpose
