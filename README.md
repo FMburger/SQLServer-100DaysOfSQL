@@ -4,16 +4,9 @@
 ## Day39 Create a Stored Procedure
 
 #### Purpose
-> 
+> Create a Stored Procedure
 
-#### Column
-> 
-
-#### Skill
-> 
-
-#### Code
-
+#### Step by Step
 
 #### Success
 ![](PNG/)
