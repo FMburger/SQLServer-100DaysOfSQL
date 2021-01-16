@@ -1,6 +1,43 @@
 # SQLServer - 100 Days of SQL
 挑戰連續 100 天學習 SQL 語法, 除了可以複習之外, 也可以釐清很多不懂的地方。
 
+
+## Day41 [LeetCode-#612] Shortest Distance in a Plane
+
+#### Purpose
+> Find the shortest distance in a plane.
+
+#### Column
+> shortest
+
+#### Skill
+>
+
+#### Code
+    SELECT DISTINCT top 1 
+        ROUND(
+            SQRT(
+                POWER(
+                    startingPoint.x - endingPoint.x,
+                    2
+                ) + power(
+                    startingPoint.y - endingPoint.y,
+                    2
+                )
+            ),
+            2
+        ) AS shortest
+    FROM point_2d startingPoint
+    JOIN point_2d endingPoint
+      ON startingPoint.x <> endingPoint.x 
+        OR startingPoint.y <> endingPoint.y
+    ORDER BY shortest
+    
+
+#### Success
+![](PNG/612.ShortestDistanceinaPlane.PNG)
+
+
 ## Day40 [LeetCode-#?1435] Create a Session Bar Chart
 
 #### Purpose
