@@ -1,6 +1,19 @@
 # SQLServer - 100 Days of SQL
 挑戰連續 100 天學習 SQL 語法, 除了可以複習之外, 也可以釐清很多不懂的地方。
 
+## Day43 [Implementation] Use VSCode to create and run T-SQL Script
+
+#### Purpose
+> Use VSCode to create and run T-SQL Script
+
+#### Step by Step
+> 
+
+#### Code
+
+#### Success
+![](PNG/)
+
 ## Day42 Update Snippets in VScode
 
 #### Update snippets
