@@ -1,6 +1,8 @@
 # SQLServer - 100 Days of SQL
 挑戰連續 100 天學習 SQL 語法, 除了可以複習之外, 也可以釐清很多不懂的地方。
 
+## Day44 [LeetCode-1211] Queries Quality and Percentage
+
 ## Day43 [Implementation] Use VSCode to create and run T-SQL Script
 
 #### Purpose
