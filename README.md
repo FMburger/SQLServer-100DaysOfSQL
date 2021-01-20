@@ -1,7 +1,59 @@
 # SQLServer - 100 Days of SQL
 挑戰連續 100 天學習 SQL 語法, 除了可以複習之外, 也可以釐清很多不懂的地方。
 
+## Day45 [LeetCode-#1280] Students and Examinations
+
+#### Purpose
+> Find the number of times each student attended each exam
+
+#### Column
+> student_id, student_name, subject_name, attended_exams
+
+#### Skill
+> 
+
+#### Code
+SELECT 
+    dd.student_id,
+    dd.student_name, 
+    dd.subject_name,
+    ISNULL(
+        count(dd.cnt)
+        ,
+        0
+    ) AS attended_exams
+FROM (
+    SELECT 
+        s.student_id,
+        s.student_name,
+        sub.subject_name,
+        e.student_id AS cnt
+    FROM students s
+    CROSS JOIN subjects sub
+    LEFT JOIN examinations e
+        ON s.student_id = e.student_id
+        AND e.subject_name = sub.subject_name 
+) AS dd
+GROUP BY dd.student_id, dd.student_name, dd.subject_name
+
+#### Success
+![](PNG/1280.StudentsandExaminations.PNG)
+
 ## Day44 [LeetCode-1211] Queries Quality and Percentage
+
+#### Purpose
+> 
+
+#### Column
+>
+
+#### Skill
+> 
+
+#### Code
+
+#### Success
+![](PNG/)
 
 ## Day43 [Implementation] Use VSCode to create and run T-SQL Script
 
