@@ -1,6 +1,71 @@
 # SQLServer - 100 Days of SQL
 挑戰連續 100 天學習 SQL 語法, 除了可以複習之外, 也可以釐清很多不懂的地方。
 
+## Day47 [LeetCode-#1212] Team Scores in Football Tournament
+
+#### Purpose
+> 
+
+#### Column
+> 
+
+#### Skill
+> 
+
+#### Code
+    with new_table as (
+    select 
+        host_team, 
+        guest_team, 
+        case when host_goals = guest_goals then 1 when host_goals < guest_goals then 0 else 3 end as host_points, 
+        case when host_goals = guest_goals then 1 when host_goals > guest_goals then 0 else 3 end as guest_points 
+    from 
+        matches
+    ) 
+    select 
+    * 
+    from 
+    (
+        select 
+        t.team_id as team_id, 
+        t.team_name as team_name, 
+        coalesce(b.num_points, 0) as num_points 
+        from 
+        (
+            select 
+            team_id, 
+            sum(total_points) as num_points 
+            from 
+            (
+                select 
+                host_team as team_id, 
+                sum(host_points) as total_points 
+                from 
+                new_table 
+                group by 
+                host_team 
+                union all 
+                select 
+                guest_team as team_id, 
+                sum(guest_points) as total_points 
+                from 
+                new_table 
+                group by 
+                guest_team
+            ) a 
+            group by 
+            team_id
+        ) b 
+        right join teams t on b.team_id = t.team_id
+    ) c 
+    order by 
+    c.num_points desc, 
+    c.team_id
+
+
+#### Success
+![](PNG/1212.Team Scores in Football Tournament.PNG)
+
 ## Day46 [LeetCode-#1350] Students With Invalid Departments
 
 #### Purpose
