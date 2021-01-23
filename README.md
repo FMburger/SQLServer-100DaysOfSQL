@@ -1,6 +1,31 @@
 # SQLServer - 100 Days of SQL
 挑戰連續 100 天學習 SQL 語法, 除了可以複習之外, 也可以釐清很多不懂的地方。
 
+## Day48 [LeetCode-#1571] Warehouse Manager
+
+#### Purpose
+> Write an SQL query to report, How much cubic feet of volume does the inventory occupy in each warehouse
+
+#### Column
+> warehouse_name, volume
+
+#### Skill
+> 
+
+#### Code
+    SELECT 
+        a.name AS warehouse_name,
+        SUM(
+            Width * Length * Height * units
+        ) AS volume
+    FROM Warehouse a
+    JOIN Products b
+        ON a.product_id = b.product_id
+    GROUP BY a.name
+
+#### Success
+![](PNG/1571.WarehouseManager.PNG)
+
 ## Day47 [LeetCode-#1212] Team Scores in Football Tournament
 
 #### Purpose
