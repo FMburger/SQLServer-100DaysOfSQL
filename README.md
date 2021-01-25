@@ -1,6 +1,28 @@
 # SQLServer - 100 Days of SQL
 挑戰連續 100 天學習 SQL 語法, 除了可以複習之外, 也可以釐清很多不懂的地方。
-   
+
+## Day50 [LeetCode-#1050] Actors and Directors Who Cooperated At Least Three Times
+
+#### Purpose
+> Find the actors and directors who cooperated at Least three times
+
+#### Column
+> actor_id, director_id
+
+#### Skill
+> 
+
+#### Code
+    SELECT
+        actor_id,
+        director_id 
+    FROM ActorDirector
+    GROUP BY actor_id, director_id
+    HAVING COUNT(director_id) > 2
+
+
+#### Success
+![](PNG/1050.ActorsandDirectorsWhoCooperatedAtLeastThreeTimes.PNG)  
 
 ## Day49 Update Snippets in VScode
 
