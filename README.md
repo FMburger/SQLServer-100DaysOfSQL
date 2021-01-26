@@ -1,6 +1,30 @@
 # SQLServer - 100 Days of SQL
 挑戰連續 100 天學習 SQL 語法, 除了可以複習之外, 也可以釐清很多不懂的地方。
 
+## Day? [LeetCode-#?] ?
+
+#### Purpose
+>  Find the IDs of the users who visited without making any transactions and the number of times they made these types of visits.
+
+#### Column
+> customer_id, count_no_trans
+
+#### Skill
+> 
+
+#### Code
+    SELECT 
+        v.customer_id,
+        COUNT(1) AS count_no_trans
+    FROM Visits v 
+    LEFT JOIN Transactions t 
+      ON v.visit_id = t.visit_id 
+    WHERE t.transaction_id IS NULL
+    GROUP BY v.customer_id
+
+#### Success
+![](PNG/1581.CustomerWhoVisitedbutDidNotMakeAnyTransactions.PNG)
+
 ## Day50 [LeetCode-#1050] Actors and Directors Who Cooperated At Least Three Times
 
 #### Purpose
