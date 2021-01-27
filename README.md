@@ -1,6 +1,30 @@
 # SQLServer - 100 Days of SQL
 挑戰連續 100 天學習 SQL 語法, 除了可以複習之外, 也可以釐清很多不懂的地方。
 
+## Day52 [LeetCode-#1587] Bank Account Summary II
+
+#### Purpose
+> Find the name and balance of users with a balance higher than 10000. 
+
+#### Column
+> name, balance  
+
+#### Skill
+> 
+
+#### Code
+    SELECT 
+        Users.name AS name,
+        SUM(Transactions.amount) AS balance
+    FROM Transactions
+    LEFT JOIN Users
+    ON Transactions.account = Users.account
+    GROUP BY Users.name
+    HAVING SUM(Transactions.amount) > 10000
+
+#### Success
+![](PNG/1587.BankAccountSummaryII.PNG)
+
 ## Day51 [LeetCode-#1581] Customer Who Visited but Did Not Make Any Transactions
 
 #### Purpose
