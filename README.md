@@ -1,6 +1,8 @@
 # SQLServer - 100 Days of SQL
 挑戰連續 100 天學習 SQL 語法, 除了可以複習之外, 也可以釐清很多不懂的地方。
 
+
+
 ## Day52 [LeetCode-#1587] Bank Account Summary II
 
 #### Purpose
@@ -18,7 +20,7 @@
         SUM(Transactions.amount) AS balance
     FROM Transactions
     LEFT JOIN Users
-    ON Transactions.account = Users.account
+      ON Transactions.account = Users.account
     GROUP BY Users.name
     HAVING SUM(Transactions.amount) > 10000
 
