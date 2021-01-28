@@ -1,7 +1,7 @@
 # SQLServer - 100 Days of SQL
 挑戰連續 100 天學習 SQL 語法, 除了可以複習之外, 也可以釐清很多不懂的地方。
 
-## Day [LeetCode-#1693] Daily Leads and Partners
+## Day53 [LeetCode-#1693] Daily Leads and Partners
 
 #### Purpose
 > Return the number of distinct lead_id's and distinct partner_id's.
