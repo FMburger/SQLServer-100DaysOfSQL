@@ -1,6 +1,43 @@
 # SQLServer - 100 Days of SQL
 挑戰連續 100 天學習 SQL 語法, 除了可以複習之外, 也可以釐清很多不懂的地方。
 
+## Day54 [LeetCode-#1501] Countries You Can Safely Invest In
+
+#### Purpose
+> 
+
+#### Column
+> country 
+
+#### Skill
+> 
+
+#### Code
+# Write your MySQL query statement below
+    WITH CTE AS (
+        SELECT 
+            CNT.name AS CNTR_NM,
+            CR.duration 
+        FROM Person P 
+        JOIN Calls CR 
+          ON P.id = CR.caller_id 
+            OR P.id = CR.callee_id   
+        JOIN Country CNT 
+          ON CNT.country_code = LEFT(P.phone_number, 3) 
+    ) 
+    SELECT 
+        CNTR_NM AS country
+    FROM CTE
+    GROUP BY CNTR_NM
+    HAVING AVG(duration) > (
+        SELECT 
+            AVG(duration) AS Glob_AVG
+        FROM CTE
+     )
+
+#### Success
+![](PNG/1501.CountriesYouCanSafelyInvestIn.PNG)
+
 ## Day53 [LeetCode-#1693] Daily Leads and Partners
 
 #### Purpose
