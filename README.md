@@ -37,7 +37,6 @@
 > 
 
 #### Code
-# Write your MySQL query statement below
     WITH CTE AS (
         SELECT 
             CNT.name AS CNTR_NM,
