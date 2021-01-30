@@ -1,6 +1,30 @@
 # SQLServer - 100 Days of SQL
 挑戰連續 100 天學習 SQL 語法, 除了可以複習之外, 也可以釐清很多不懂的地方。
 
+## Day55 [LeetCode-#178] Rank Scores 
+
+#### Purpose
+> Write a query to rank scores
+
+#### Column
+> score, Rank
+
+#### Skill
+> 
+
+#### Code
+    SELECT
+        Score,
+        DENSE_RANK() OVER(
+            ORDER BY Score
+            DESC
+        ) AS rank 
+    FROM Scores
+
+
+#### Success
+![](PNG/178.RankScores.PNG)
+
 ## Day54 [LeetCode-#1501] Countries You Can Safely Invest In
 
 #### Purpose
