@@ -999,7 +999,7 @@ SET sex =
 #### Success
 ![](PNG/1164.ProductPriceataGivenDate.PNG)
 
-##  Day19. [LeetCode-#1148] Article Views I
+## Day19. [LeetCode-#1148] Article Views I
 
 #### Purpose
 > Find all the authors that viewed at least one of their own articles
@@ -1020,7 +1020,7 @@ SET sex =
 ![](PNG/1148.ArticleViewsI.PNG)
 
 
-##  Day18. [LeetCode- #1303] Find the Team Size
+## Day18. [LeetCode- #1303] Find the Team Size
 
 #### Purpose
 > Find the teams size of each of the employees
@@ -1050,7 +1050,7 @@ SET sex =
 #### Success
 ![](PNG/1303.FindtheTeamSize.PNG)
 
-##  Day17. [LeetCode-#577.]Employee Bonus
+## Day17. [LeetCode-#577.]Employee Bonus
 
 #### Purpose
 >Select all employee's name and bonus whose bonus is < 1000.
@@ -1102,7 +1102,7 @@ SET sex =
 #### Success
 ![](PNG/181.EmployeesEarningMoreThanTheirManagers.PNG)
 
-##  Day15. [LeetCode-#183]Customers Who Never Order
+## Day15. [LeetCode-#183]Customers Who Never Order
 
 #### Purpose
 >找出沒有下訂的顧客
@@ -1125,7 +1125,7 @@ Customers
 #### Success
 ![](PNG/183.CustomersWhoNeverOrder.PNG)
 
-##  Day14 [LeetCode-#182] Duplicate Emails
+## Day14 [LeetCode-#182] Duplicate Emails
 
 #### Purpose
 >找出重複的電子郵件
