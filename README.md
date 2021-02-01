@@ -1,6 +1,59 @@
 # SQLServer - 100 Days of SQL
 挑戰連續 100 天學習 SQL 語法, 除了可以複習之外, 也可以釐清很多不懂的地方。
 
+## Day57 [LeetCode-#1454] Active Users
+
+#### Purpose
+> Find the id and the name of active users.
+
+#### Column
+> id, name  
+
+#### Skill
+> 
+
+#### Code
+    SELECT DISTINCT
+        c.id,
+        name
+    FROM(
+        SELECT 
+            id,
+            COALESCE(
+                DATEDIFF(
+                    day,
+                    start_date,
+                    fifth_date
+                ),
+                0
+            ) AS diff
+        FROM(
+            SELECT 
+                id,
+                login_date AS start_date,
+                LEAD(
+                    login_date,
+                    4
+                ) OVER(
+                    partition BY id 
+                    ORDER BY login_date
+                ) AS fifth_date
+            FROM(
+                SELECT DISTINCT 
+                    id,
+                    login_date
+                FROM logins
+                ) a
+            )b 
+        )c ,
+        accounts d
+    WHERE diff = 4
+        AND c.id = d.id
+    ORDER BY c.id
+
+#### Success
+![](PNG/1454.ActiveUsers.PNG)
+
 ## Day56 Update Snippets in VScode
 
 #### Update snippets
