@@ -1,7 +1,7 @@
 # SQLServer - 100 Days of SQL
 挑戰連續 100 天學習 SQL 語法, 除了可以複習之外, 也可以釐清很多不懂的地方。
 
-## Day57 [LeetCode-#1454] Active Users
+## Day57. [LeetCode-#1454] Active Users
 
 #### Purpose
 > Find the id and the name of active users.
@@ -54,11 +54,11 @@
 #### Success
 ![](PNG/1454.ActiveUsers.PNG)
 
-## Day56 Update Snippets in VScode
+## Day56. Update Snippets in VScode
 
 #### Update snippets
 
-## Day55 [LeetCode-#178] Rank Scores 
+## Day55. [LeetCode-#178] Rank Scores 
 
 #### Purpose
 > Write a query to rank scores
@@ -82,7 +82,7 @@
 #### Success
 ![](PNG/178.RankScores.PNG)
 
-## Day54 [LeetCode-#1501] Countries You Can Safely Invest In
+## Day54. [LeetCode-#1501] Countries You Can Safely Invest In
 
 #### Purpose
 > 
@@ -118,7 +118,7 @@
 #### Success
 ![](PNG/1501.CountriesYouCanSafelyInvestIn.PNG)
 
-## Day53 [LeetCode-#1693] Daily Leads and Partners
+## Day53. [LeetCode-#1693] Daily Leads and Partners
 
 #### Purpose
 > Return the number of distinct lead_id's and distinct partner_id's.
@@ -141,7 +141,7 @@
 #### Success
 ![](PNG/1693.DailyLeadsandPartners.PNG)
 
-## Day52 [LeetCode-#1587] Bank Account Summary II
+## Day52. [LeetCode-#1587] Bank Account Summary II
 
 #### Purpose
 > Find the name and balance of users with a balance higher than 10000. 
@@ -165,7 +165,7 @@
 #### Success
 ![](PNG/1587.BankAccountSummaryII.PNG)
 
-## Day51 [LeetCode-#1581] Customer Who Visited but Did Not Make Any Transactions
+## Day51. [LeetCode-#1581] Customer Who Visited but Did Not Make Any Transactions
 
 #### Purpose
 >  Find the IDs of the users who visited without making any transactions and the number of times they made these types of visits.
@@ -189,7 +189,7 @@
 #### Success
 ![](PNG/1581.CustomerWhoVisitedbutDidNotMakeAnyTransactions.PNG)
 
-## Day50 [LeetCode-#1050] Actors and Directors Who Cooperated At Least Three Times
+## Day50. [LeetCode-#1050] Actors and Directors Who Cooperated At Least Three Times
 
 #### Purpose
 > Find the actors and directors who cooperated at Least three times
@@ -212,11 +212,11 @@
 #### Success
 ![](PNG/1050.ActorsandDirectorsWhoCooperatedAtLeastThreeTimes.PNG)  
 
-## Day49 Update Snippets in VScode
+## Day49. Update Snippets in VScode
 
 #### Update snippets
 
-## Day48 [LeetCode-#1571] Warehouse Manager
+## Day48. [LeetCode-#1571] Warehouse Manager
 
 #### Purpose
 > Write an SQL query to report, How much cubic feet of volume does the inventory occupy in each warehouse
@@ -241,7 +241,7 @@
 #### Success
 ![](PNG/1571.WarehouseManager.PNG)
 
-## Day47 [LeetCode-#1212] Team Scores in Football Tournament
+## Day47. [LeetCode-#1212] Team Scores in Football Tournament
 
 #### Purpose
 > 
@@ -306,7 +306,7 @@
 #### Success
 ![](PNG/1212.Team Scores in Football Tournament.PNG)
 
-## Day46 [LeetCode-#1350] Students With Invalid Departments
+## Day46. [LeetCode-#1350] Students With Invalid Departments
 
 #### Purpose
 > 
@@ -323,7 +323,7 @@
 #### Success
 ![](PNG/)
 
-## Day45 [LeetCode-#1280] Students and Examinations
+## Day45. [LeetCode-#1280] Students and Examinations
 
 #### Purpose
 > Find the number of times each student attended each exam
@@ -361,7 +361,7 @@ GROUP BY dd.student_id, dd.student_name, dd.subject_name
 #### Success
 ![](PNG/1280.StudentsandExaminations.PNG)
 
-## Day44 [LeetCode-1211] Queries Quality and Percentage
+## Day44. [LeetCode-1211] Queries Quality and Percentage
 
 #### Purpose
 > 
@@ -377,7 +377,7 @@ GROUP BY dd.student_id, dd.student_name, dd.subject_name
 #### Success
 ![](PNG/)
 
-## Day43 [Implementation] Use VSCode to create and run T-SQL Script
+## Day43. [Implementation] Use VSCode to create and run T-SQL Script
 
 #### Purpose
 > Use VSCode to create and run T-SQL Script
@@ -390,11 +390,11 @@ GROUP BY dd.student_id, dd.student_name, dd.subject_name
 #### Success
 ![](PNG/)
 
-## Day42 Update Snippets in VScode
+## Day42. Update Snippets in VScode
 
 #### Update snippets
 
-## Day41 [LeetCode-#612] Shortest Distance in a Plane
+## Day41. [LeetCode-#612] Shortest Distance in a Plane
 
 #### Purpose
 > Find the shortest distance in a plane.
@@ -430,7 +430,7 @@ GROUP BY dd.student_id, dd.student_name, dd.subject_name
 ![](PNG/612.ShortestDistanceinaPlane.PNG)
 
 
-## Day40 [LeetCode-#?1435] Create a Session Bar Chart
+## Day40. [LeetCode-#?1435] Create a Session Bar Chart
 
 #### Purpose
 > Create a Session Bar Chart
@@ -487,7 +487,7 @@ GROUP BY dd.student_id, dd.student_name, dd.subject_name
 #### Success
 ![](PNG/1435.Create aSessionBarChart.PNG)
 
-## Day39 Create a Stored Procedure
+## Day39. Create a Stored Procedure
 
 #### Purpose
 > Create a Stored Procedure
@@ -497,7 +497,7 @@ GROUP BY dd.student_id, dd.student_name, dd.subject_name
 #### Success
 ![](PNG/)
 
-## Day38 [LeetCode-#586] Customer Placing the Largest Number of Orders
+## Day38. [LeetCode-#586] Customer Placing the Largest Number of Orders
 
 #### Purpose
 > Find the customer who placed maximum numbers of orders
@@ -517,7 +517,7 @@ GROUP BY dd.student_id, dd.student_name, dd.subject_name
 #### Success
 ![](PNG/586.CustomerPlacingtheLargestNumberofOrders.PNG)
 
-## Day37 [LeetCode-#603] Consecutive Available Seats
+## Day37. [LeetCode-#603] Consecutive Available Seats
 
 #### Purpose
 > Find the consecutive available seats
@@ -548,7 +548,7 @@ GROUP BY dd.student_id, dd.student_name, dd.subject_name
 #### Success
 ![](PNG/603.ConsecutiveAvailableSeats.PNG)
 
-## Day36 [LeetCode-#1149] Article Views II
+## Day36. [LeetCode-#1149] Article Views II
 
 #### Purpose
 > Find all the people who viewed more than one article on the same date.
@@ -569,11 +569,11 @@ GROUP BY dd.student_id, dd.student_name, dd.subject_name
 #### Success
 ![](PNG/1149.ArticleViewsII.PNG)
 
-## Day35 Update Snippets in VScode
+## Day35. Update Snippets in VScode
 
 #### Update snippets
 
-## Day34 [Issue] TCP Port Is Already In Use
+## Day34. [Issue] TCP Port Is Already In Use
 
 #### Symptoms
 > Unable to start SQL Server
@@ -587,7 +587,7 @@ GROUP BY dd.student_id, dd.student_name, dd.subject_name
 #### Issue
 ![](PNG/TCPPortIsAlreadyInUse.PNG)
 
-## Day33 [LeetCode-#1179] Reformat Department Table
+## Day33. [LeetCode-#1179] Reformat Department Table
 
 #### Purpose
 > Reformat the table such that there is a department id column and a revenue column for each month.
@@ -622,7 +622,7 @@ GROUP BY dd.student_id, dd.student_name, dd.subject_name
 #### Success
 ![](PNG/1179.ReformatDepartmentTable.PNG)
 
-## Day32 [LeetCode-#613] Shortest Distance in a Line
+## Day32. [LeetCode-#613] Shortest Distance in a Line
 
 #### Purpose
 > Find the shortest distance between two points in these points.
@@ -644,7 +644,7 @@ GROUP BY dd.student_id, dd.student_name, dd.subject_name
 #### Success
 ![](PNG/613.ShortestDistanceinaLine.PNG)
 
-## Day31 [LeetCode-#1173] Immediate Food Delivery I
+## Day31. [LeetCode-#1173] Immediate Food Delivery I
 
 #### Purpose
 > Find the percentage of immediate orders in the table
@@ -690,7 +690,7 @@ GROUP BY dd.student_id, dd.student_name, dd.subject_name
 #### Success
 ![](PNG/1173.ImmediateFoodDeliveryI.PNG)
 
-## Day30 [LeetCode-#1543] Fix Product Name Format
+## Day30. [LeetCode-#1543] Fix Product Name Format
 
 #### Purpose
 > Return table result in specific format.
@@ -719,7 +719,7 @@ GROUP BY dd.student_id, dd.student_name, dd.subject_name
 #### Success
 ![](PNG/1543.FixProductNameFormat.PNG)
 
-## Day29 [LeetCode-#1294] Weather Type in Each Country
+## Day29. [LeetCode-#1294] Weather Type in Each Country
 
 #### Purpose
 > Find the type of weather in each country for November 2019
@@ -749,7 +749,7 @@ GROUP BY dd.student_id, dd.student_name, dd.subject_name
 #### Success
 ![](PNG/1294.WeatherTypeinEachCountry.PNG)
 
-## Day28 [LeetCode-#620] Not Boring Movies
+## Day28. [LeetCode-#620] Not Boring Movies
 
 #### Purpose
 > output movies with an odd numbered ID and a description that is not 'boring'. Order the result by rating.
@@ -774,7 +774,7 @@ GROUP BY dd.student_id, dd.student_name, dd.subject_name
 #### Success
 ![](PNG/620.NotBoringMovies.PNG)
 
-## Day27 [LeetCode-#?] Big Countries
+## Day27. [LeetCode-#?] Big Countries
 
 #### Purpose
 > Find big country
@@ -797,7 +797,7 @@ GROUP BY dd.student_id, dd.student_name, dd.subject_name
 #### Success
 ![](PNG/595.BigCountries.PNG)
 
-## Day26 [LeetCode-#1327] List the Products Ordered in a Period
+## Day26. [LeetCode-#1327] List the Products Ordered in a Period
 
 #### Purpose
 > get the names of products with greater than or equal to 100 units ordered in February 2020 and their amount
@@ -830,7 +830,7 @@ GROUP BY dd.student_id, dd.student_name, dd.subject_name
 #### Success
 ![](PNG/1327.ListtheProductsOrderedinaPeriod.PNG)
 
-## Day25 [LeetCode-#627] Swap Salary
+## Day25. [LeetCode-#627] Swap Salary
 
 #### Purpose
 > Swap all f and m values with a single update statement and no intermediate temp table
@@ -855,7 +855,7 @@ SET sex =
 #### Success
 ![](PNG/627.SwapSalary.PNG)
 
-## Day24 [LeetCode-#1517] Find Users With Valid E-Mails
+## Day24. [LeetCode-#1517] Find Users With Valid E-Mails
 
 #### Purpose
 > Find the user who have valid emails.
@@ -881,7 +881,7 @@ SET sex =
 #### Success
 ![](PNG/1517.FindUsersWithValidE-Mails.PNG)
 
-## Day23 [LeetCode-#610] Triangle Judgement
+## Day23. [LeetCode-#610] Triangle Judgement
 
 #### Purpose
 > Query to check whether these three line segments can form a triangle
@@ -910,7 +910,7 @@ SET sex =
 ![](PNG/610.TriangleJudgement.PNG)
 
 
-## Day22 [LeetCode-#1241] Number of Comments per Post
+## Day22. [LeetCode-#1241] Number of Comments per Post
 
 #### Purpose
 > Find the number of comments per post
@@ -940,7 +940,7 @@ SET sex =
 #### Success
 ![](PNG/1241.NumberofCommentsperPost.PNG)
 
-## Day21 [LeetCode-#584] Find Customer Referee
+## Day21. [LeetCode-#584] Find Customer Referee
 
 #### Purpose
 > Return the list of customers NOT referred by the person with id '2'
