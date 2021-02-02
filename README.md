@@ -1,7 +1,7 @@
 # SQLServer - 100 Days of SQL
 挑戰連續 100 天學習 SQL 語法, 除了可以複習之外, 也可以釐清很多不懂的地方。
 
-## Day58. [LeetCode-#1407]  Top Travellers
+## Day58. [LeetCode-#1407] Top Travellers
 
 #### Purpose
 > Write an SQL query to report the distance travelled by each user.
