@@ -1,6 +1,35 @@
 # SQLServer - 100 Days of SQL
 挑戰連續 100 天學習 SQL 語法, 除了可以複習之外, 也可以釐清很多不懂的地方。
 
+## Day58. [LeetCode-#1407]  Top Travellers
+
+#### Purpose
+> Write an SQL query to report the distance travelled by each user.
+
+#### Column
+> name, travelled_distance 
+
+#### Skill
+> 
+
+#### Code
+    SELECT 
+        u.name,
+        isnull(
+            sum(
+                r.distance
+            ),
+            0
+        ) AS travelled_distance
+    FROM Users u
+    LEFT JOIN Rides r
+      ON u.id = r.user_id 
+    GROUP BY u.name 
+    ORDER BY travelled_distance DESC, u.name
+
+#### Success
+![](PNG/1407.TopTravellers.PNG)
+
 ## Day57. [LeetCode-#1454] Active Users
 
 #### Purpose
