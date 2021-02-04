@@ -1,6 +1,49 @@
 # SQLServer - 100 Days of SQL
 挑戰連續 100 天學習 SQL 語法, 除了可以複習之外, 也可以釐清很多不懂的地方。
 
+## Day60 [LeetCode-1341] Movie Rating
+
+#### Purpose
+>1. Find the name of the user who has rated the greatest number of movies
+>2. Find the movie name with the highest average rating in February 2020
+
+#### Column
+> result
+
+#### Skill
+> 
+
+#### Code
+    SELECT
+        * 
+    FROM (
+        SELECT TOP 1 
+            users.name as results
+        FROM movie_rating
+        INNER JOIN users 
+            ON users.user_id = movie_rating.user_id
+        GROUP BY users.name
+        ORDER BY COUNT(movie_id) desc, users.name
+    ) AS t1
+
+    UNION ALL
+
+    SELECT
+        * 
+    FROM (
+        SELECT TOP 1 
+            movies.title AS results
+        FROM movies
+        INNER JOIN movie_rating 
+            ON movies.movie_id = movie_rating.movie_id
+        WHERE month(movie_rating.created_at) = 2
+        GROUP BY movies.title
+        ORDER BY CAST(SUM(rating) AS float) / COUNT(movies.title) desc, movies.title
+    ) AS t2
+
+#### Success
+![](PNG/1341.MovieRating.PNG)
+
 ## Day59 [LeetCode-#1683] Invalid Tweets
 
 #### Purpose
