@@ -1,7 +1,36 @@
 # SQLServer - 100 Days of SQL
 挑戰連續 100 天學習 SQL 語法, 除了可以複習之外, 也可以釐清很多不懂的地方。
 
-## Day60 [LeetCode-1341] Movie Rating
+## Day61. [LeetCode-#180] Consecutive Numbers
+
+#### Purpose
+>  Find all numbers that appear at least three times consecutively.
+
+#### Column
+>  ConsecutiveNums
+
+#### Skill
+> 
+
+#### Code
+    WITH Sel AS
+    (
+        SELECT 
+            Num,
+            LAG(Num, 1) OVER (ORDER BY Id) AS Prev,
+            LEAD(Num, 1) OVER (ORDER BY Id) AS Next
+        FROM Logs
+    )
+    SELECT DISTINCT 
+        Num AS ConsecutiveNums
+    FROM Sel
+    WHERE Next = Num 
+    AND Prev = Num
+
+#### Success
+![](PNG/180.ConsecutiveNumbers.PNG)
+
+## Day60. [LeetCode-1341] Movie Rating
 
 #### Purpose
 >1. Find the name of the user who has rated the greatest number of movies
@@ -44,7 +73,7 @@
 #### Success
 ![](PNG/1341.MovieRating.PNG)
 
-## Day59 [LeetCode-#1683] Invalid Tweets
+## Day59. [LeetCode-#1683] Invalid Tweets
 
 #### Purpose
 > Find the IDs of the invalid tweets. 
