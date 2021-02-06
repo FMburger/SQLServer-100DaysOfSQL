@@ -1,6 +1,39 @@
 # SQLServer - 100 Days of SQL
 挑戰連續 100 天學習 SQL 語法, 除了可以複習之外, 也可以釐清很多不懂的地方。
 
+## Day62 [LeetCode-#1107] New Users Daily Count
+
+#### Purpose
+>  
+
+#### Column
+> login_date, user_count
+
+#### Skill
+> 
+
+#### Code
+    SELECT
+        activity_date AS login_date,
+        COUNT(DISTINCT user_id) AS user_count
+    FROM (
+        SELECT 
+            user_id,
+            activity,
+            min(activity_date) AS activity_date
+        FROM traffic
+    GROUP BY user_id,activity) t
+    GROUP BY activity_date,activity
+    HAVING activity ='login' 
+    AND activity_date >= dateadd(
+        day,
+        -90,
+        '2019-06-30'
+    )
+
+#### Success
+![](PNG/1107.NewUsersDailyCount.PNG)
+
 ## Day61. [LeetCode-#180] Consecutive Numbers
 
 #### Purpose
