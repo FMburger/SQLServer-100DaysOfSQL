@@ -1,6 +1,10 @@
 # SQLServer - 100 Days of SQL
 挑戰連續 100 天學習 SQL 語法, 除了可以複習之外, 也可以釐清很多不懂的地方。
 
+## Day63 Update Snippets in VScode
+
+#### Update snippets
+
 ## Day62 [LeetCode-#1107] New Users Daily Count
 
 #### Purpose
