@@ -1,6 +1,37 @@
 # SQLServer - 100 Days of SQL
 挑戰連續 100 天學習 SQL 語法, 除了可以複習之外, 也可以釐清很多不懂的地方。
 
+## Day64 [LeetCode-#197] Rising Temperature
+
+#### Purpose
+>  Find all dates' id with higher temperature compared to its previous dates.
+
+#### Column
+> id
+
+#### Skill
+> 
+
+#### Code
+    SELECT
+        w1.id 
+    FROM weather w1 
+    jOIN (
+        SELECT 
+            *,
+            DATEADD(
+                DAY,
+                1,
+                (Recorddate)
+            ) lastday
+        FROM weather) w2 
+    ON w1.recorddate = w2.lastday 
+    WHERE w1.temperature > w2.temperature
+
+#### Success
+![](PNG/197.RisingTemperature.PNG)
+
+
 ## Day63 Update Snippets in VScode
 
 #### Update snippets
