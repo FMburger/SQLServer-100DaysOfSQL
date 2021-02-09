@@ -1,6 +1,40 @@
 # SQLServer - 100 Days of SQL
 挑戰連續 100 天學習 SQL 語法, 除了可以複習之外, 也可以釐清很多不懂的地方。
 
+## Day65 [LeetCode-#177] Nth Highest Salary
+
+#### Purpose
+> Write a SQL query to get the nth highest salary from the Employee table
+
+#### Column
+> getNthHighestSalary(2)
+
+#### Skill
+> 
+
+#### Code
+    CREATE FUNCTION getNthHighestSalary(@N INT) RETURNS INT AS
+    BEGIN
+        RETURN (
+        
+            SELECT DISTINCT 
+                Salary
+            FROM(
+                SELECT 
+                    DENSE_RANK() OVER(
+                        ORDER BY Salary DESC
+                    ) AS rank
+                    ,
+                    Salary
+                FROM Employee
+            ) e
+            WHERE rank = @N
+        );
+    END
+
+#### Success
+![](PNG/177.NthHighestSalary.PNG)
+
 ## Day64 [LeetCode-#197] Rising Temperature
 
 #### Purpose
