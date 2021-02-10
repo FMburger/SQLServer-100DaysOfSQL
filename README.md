@@ -1,6 +1,38 @@
 # SQLServer - 100 Days of SQL
 挑戰連續 100 天學習 SQL 語法, 除了可以複習之外, 也可以釐清很多不懂的地方。
 
+## Day66. [LeetCode-#184] Department Highest Salary
+
+#### Purpose
+> Find employees who have the highest salary in each of the departments. 
+
+#### Column
+> Department, Employee, Salary
+
+#### Skill
+> 
+
+#### Code
+    SELECT
+        d.Name AS Department,
+        Sel.Name AS Employee,
+        Sel.Salary AS Salary
+    FROM
+    (
+        SELECT
+            Name,
+            Salary,
+            DepartmentId,
+            DENSE_RANK() OVER (PARTITION BY DepartmentId ORDER BY Salary DESC) AS dr
+        FROM Employee 
+    ) AS Sel
+    INNER JOIN Department d 
+      ON d.Id = Sel.DepartmentId
+    WHERE Sel.dr = 1
+
+#### Success
+![](PNG/184.DepartmentHighestSalary.PNG)
+
 ## Day65 [LeetCode-#177] Nth Highest Salary
 
 #### Purpose
