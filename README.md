@@ -1,6 +1,10 @@
 # SQLServer - 100 Days of SQL
 挑戰連續 100 天學習 SQL 語法, 除了可以複習之外, 也可以釐清很多不懂的地方。
 
+## Day67. Update Snippets in VScode
+
+#### Update snippets
+
 ## Day66. [LeetCode-#184] Department Highest Salary
 
 #### Purpose
